@@ -1,13 +1,20 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  const charArr = word.split('');
+
+  for (let c of charArr) {
+    if (c !== charArr.pop()) {
+      return false;
+    }
+  }
+  return true
 }
 
 /* 
-  Add your pseudocode here
+  Accept the string; compare the letters; return true or false based if same forward as backward
 */
 
 /*
-  Add written explanation of your solution here
+  Declare the function isPalindrome(word); split the string at each character and make a comparison; return a boolean based on comparison 
 */
 
 // You can run `node index.js` to view these console logs
